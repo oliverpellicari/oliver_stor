@@ -1,0 +1,55 @@
+
+a.buy_button {
+    color: white;
+    background-color: #44c767;
+    border-radius: 30px;
+    border: 1px solid #18ab29;
+    display: inline-block;
+    cursor: pointer;
+    font-family: Arial;
+    font-size: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #2f6627;
+    margin-bottom: 5px;
+}
+
+.buy_button:hover {
+    background-color: #5cbf2a;
+}
+
+.buy_button:active {
+    position: relative;
+    top: 1px;
+    background-color: #6a11cb;
+}
+
+.button-container {
+    text-align: center;
+}
+
+.neon-button {
+display: inline-block;
+font-family:counter;
+margin-top:20px;
+padding: 15px 40px;
+font-size: 18px;
+letter-spacing: 5px;
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+border-radius: 50px;
+position: relative;
+border: 2px solid#e20340;
+background-clip: padding-box, border-box;
+text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+transition: 0.2s;
+background: none;
+transition: 0.2s;
+}
+
+.neon-button:hover {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(135deg, #ff4765, #FC0174); /* Gradiente invertido al hacer hover */
+}
+

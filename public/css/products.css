@@ -1,0 +1,50 @@
+.skins-container {
+    margin-top: 50px;
+    margin-bottom: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.skins {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: url(/resources/pics/fondo.jpg);
+}
+
+.skin {
+    background-color: rgba(0, 0, 0, 0.837);
+    border-radius: 18px;
+    margin: 10px;
+    padding: 18px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s;
+    font-family: 'Courier New', Courier, monospace;
+}
+.skin:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fe059a;
+}
+
+.skin img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
+.tprecio{
+    font-weight: bold;
+}
+
+.imagen{
+    width: 200px;
+    height: 100px;
+}

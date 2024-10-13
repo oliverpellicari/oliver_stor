@@ -1,0 +1,131 @@
+body {
+    background-image: url(/resources/pics/fondoformulario1.jpg);
+    font-family: counter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header,footer{
+    width:100%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.container, .containerc{
+    width:auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 20px rgba(0, 255, 204, 0.6);
+}
+
+.containerc {
+    padding: 50px 30px 50px 30px;
+    width: 600px;
+}
+
+.container {
+    padding: 20px;
+}
+
+
+.form-box h2 {
+    color: #00ffcc;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-decoration: underline;
+    margin-bottom:40px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-group input, textarea{
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #00ffcc;
+    background-color: rgba(70, 90, 126, 0.4);
+    color: #fff;
+    font-size: px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #ff33cc;
+}
+
+.containerc input:focus{
+    border-color: #ff33cc;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    color: #00ffcc;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    bottom: 35px;
+    color: #ff33cc;
+    font-size: 18px;
+}
+
+.btn {
+    background: none;
+    border: 2px solid #00ffcc;
+    color: #00ffcc;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: counter;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 0px 15px #00ffcc, 0px 0px 20px #ff33cc;
+}
+
+.btn:hover {
+    background-color: #00ffcc;
+    color: #0a0f1f;
+}
+
+.text {
+    color: #00ffcc;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.text .link {
+    color: #ff33cc;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.text .link:hover {
+    text-decoration: underline;
+}

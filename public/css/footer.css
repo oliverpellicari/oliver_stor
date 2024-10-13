@@ -1,0 +1,38 @@
+/* Estilos para el footer */
+
+footer {
+    background-color: #0f0f0f; /* Negro profundo */
+    color: #d1d5db; /* Texto gris claro */
+    padding: 5px;
+    display: flex;
+    justify-content: center; /* Centra el texto "Oliver Store" */
+    align-items: center;
+    position: relative;
+}
+
+footer .social-icons {
+    position: absolute;
+    right: 20px; /* Alinea los iconos a la derecha */
+}
+
+footer a {
+    color: #00e7ff; /* Azul brillante para enlaces */
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ff0080; /* Rosa neón al pasar el ratón */
+}
+
+footer .social-icons a {
+    font-size: 1.2rem;
+    margin: 0 8px;
+    color: #00e7ff; /* Azul brillante por defecto */
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #ff0080; /* Cambia a rosa neón al pasar el ratón */
+}

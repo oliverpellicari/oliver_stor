@@ -1,0 +1,35 @@
+<%- include('partials/head'); -%>
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/resources/css/login.css">
+    <section>
+        <div class="containerc">
+            <form action="/contacto" method="post">
+                <div class="form-box">
+                    <div class="input-group">
+                        <input type="text" name="nickname" id="nickname" required placeholder=" " minlength="3">
+                        <label for="nickname">NICKNAME</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="dni" id="dni" required pattern="^[0-9]{8}[A-Za-z]$" placeholder=" ">
+                        <label for="dni">DNI</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" id="email" required placeholder=" " autocomplete="email">
+                        <label for="email">EMAIL</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="tel" name="movil" id="movil" required pattern="^[0-9]{9}$" placeholder=" ">
+                        <label for="movil">MÓVIL</label>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="mensaje" id="mensaje" rows="5" required></textarea>
+                        <label for="mensaje">MENSAJE</label>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit" class="btn neon-button">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+<%- include('partials/footer'); -%>

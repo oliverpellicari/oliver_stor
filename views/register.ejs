@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%- include('partials/head'); -%>
+<%- include('partials/header'); -%>
+<link rel="stylesheet" href="/resources/css/login.css">
+<section>
+    <div class="container">
+        <div class="form-box">
+            <h2>REGISTRO</h2>
+            <form action="/register" method="POST">
+                <div class="input-group">
+                    <input type="text" name="nickname" id="nickname" required placeholder=" " minlength="3">
+                    <label for="nickname">NICKNAME</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="dni" id="dni" required pattern="^[0-9]{8}[A-Za-z]$" placeholder=" ">
+                    <label for="dni">DNI</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" id="email" required placeholder=" ">
+                    <label for="email">EMAIL</label>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="movil" id="movil" required pattern="^[0-9]{9}$" placeholder=" ">
+                    <label for="movil">MÓVIL</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" id="password" required placeholder=" " minlength="6">
+                    <label for="password">PASSWORD</label>
+                </div>
+                <button type="submit" class="btn">REGISTRAR</button>
+                <div class="text">
+                    <span>¿Ya tienes una cuenta? <a href="/login" class="link">Iniciar sesión</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer'); -%>
