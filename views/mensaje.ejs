@@ -1,0 +1,17 @@
+<%- include('partials/head'); -%>
+<%- include('partials/header'); -%>
+    <link rel="stylesheet" href="/resources/css/error.css">
+    <title>Registro Exitoso</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                window.location.href = '/';
+            }, 3000); // Redirigir después de 5 segundos
+        });
+    </script>
+<main>
+    <div class="container">
+    <h1>Mensaje enviado</h1>
+    <p>Redirigiendo a la página principal...</p>
+    </div>
+

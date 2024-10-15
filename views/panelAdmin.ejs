@@ -1,0 +1,128 @@
+<!-- Incluir la cabecera común -->
+<%- include('partials/head'); -%>
+<link rel="stylesheet" href="/resources/css/admin3.css"> <!-- Enlace al archivo de estilo específico -->
+<%- include('partials/header'); -%> <!-- Incluir la cabecera común -->
+
+<!-- Verificación del rol del usuario -->
+<% if (typeof nickname !== 'undefined' && nickname !== null && tipoUsuario === 'admin') { %>
+  <h1>Panel de Administración</h1>
+  
+  <main>
+      <!-- Sección para agregar skins -->
+      <section>
+        <div class="containerc">
+          <h2>Agregar Skin</h2>
+          <!-- Formulario para agregar una nueva skin -->
+          <form action="/agregar-skin" method="POST">
+
+            <div class="form-box">
+              <!-- Campo para el nombre de la skin -->
+              <div class="input-group">
+                <label for="nombre_skin">Nombre:</label>
+                <input type="text" id="nombre_skin" name="nombre_skin" required>
+              </div>
+              <!-- Campo para la descripción de la skin -->
+              <div class="input-group">
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+              </div>
+              <!-- Campo para el precio de la skin -->
+              <div class="input-group">
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" required>
+              </div>
+              <!-- Campo para la URL de la imagen de la skin -->
+              <div class="input-group">
+                <label for="imagen_url">Imagen:</label>
+                <input type="text" id="imagen_url" name="imagen_url" required>
+              </div>
+              <!-- Botón para enviar el formulario -->
+              <div class="button-container">
+                <button type="submit" class="btn neon-button">Enviar</button>
+              </div>
+            </div>  
+          </form>
+        </div>
+      </section>
+
+      <!-- Sección para listar los usuarios -->
+      <section>
+        <div class="user-list-container">
+          <h2>Lista de Usuarios</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nickname</th>
+                <th>Correo Electrónico</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Listar usuarios obtenidos desde el servidor -->
+              <% usuarios.forEach(usuario => { %>
+                <tr>
+                  <td datalabel="nickname"><%= usuario.nickname %></td>
+                  <td datalabel="email"><%= usuario.email %></td>
+                  <!-- Formulario para eliminar un usuario -->
+                  <td datalabel="eliminar">
+                    <form action="/usuarios/eliminar/<%= usuario.id_usuario %>?_method=DELETE" method="POST">
+                      <button type="submit">Eliminar</button>
+                    </form>
+                  </td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+      </section>
+  </main>
+
+<!-- Bloque para los usuarios que no son administradores -->
+<% } else { %>
+  <!-- Formulario para actualizar el perfil de usuario no admin -->
+  <section>
+    <div class="containerc" id="actualizar-perfil">
+      <h2>Actualizar Perfil</h2>
+      <form action="/actualizar-perfil" method="POST">
+        <div class="form-box">
+          <!-- Campo para actualizar el nickname -->
+          <div class="input-group">
+            <label for="nickname">Nuevo Nickname:</label>
+            <input type="text" id="nickname" name="nickname" value="<%= nickname %>" required>
+          </div>
+          <!-- Campo para actualizar el correo electrónico -->
+          <div class="input-group">
+            <label for="email">Nuevo  E-mail:</label>
+            <input type="email" id="email" name="email" value="<%= email %>" required>
+          </div>
+          <!-- Botón para enviar el formulario -->
+          <div class="button-container">
+            <button type="submit" class="btn neon-button">Actualizar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Mostrar mensaje de éxito si el perfil fue actualizado -->
+  <% if (typeof success !== 'undefined' && success === 'true') { %>
+    <div class="alert success">
+      Perfil actualizado con éxito.
+    </div>
+  <% } %>
+
+<% } %>
+
+<!-- Incluir el pie de página común -->
+<%- include('partials/footer'); -%>
+
+<!-- JavaScript para mostrar la alerta si el skin fue subido correctamente -->
+<script>
+  // Obtener los parámetros de la URL
+  const queryParams = new URLSearchParams(window.location.search);
+
+  // Si el parámetro 'success' está presente, mostramos la alerta
+  if (queryParams.has('success')) {
+    alert('Proceso realizado correctamente');
+  }
+</script>

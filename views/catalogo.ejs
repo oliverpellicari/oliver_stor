@@ -9,8 +9,7 @@
               <img class="imagen" src="<%= skin.imagen_url %>" alt="<%= skin.nombre_skin %>">
               <h3><%= skin.nombre_skin %></h3>
               <p><%= skin.descripcion %></p>
-              <p class="tprecio">$<%= skin.precio %> 
-                <% if (skin.descuento == "1"){%>🔻<% }%></p>
+              <p class="tprecio">$<%= skin.precio %><% if (skin.descuento == "1"){%>🔻<% }%></p>
             </div>
           <% }) %>
         </div>

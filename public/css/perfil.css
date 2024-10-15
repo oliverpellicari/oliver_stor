@@ -1,0 +1,20 @@
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    height: 90%;
+    justify-content: center;
+}
+
+.profile{
+    display: flex;
+    color:white;
+    align-items: center;
+    margin-top: 300px;
+    background-color: black;
+    width:30%;
+    justify-content: center;
+    margin-left: 650px;
+}

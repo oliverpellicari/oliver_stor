@@ -4,18 +4,23 @@
 
 <header>
     <div>
-        <a href="/">
-        <img src="resources/pics/logomoi.png" class="logo" alt="Logo">
-        </a>
+        <a href="/"><img src="resources/pics/logo.png" class="logo" alt="Logo"></a>
     </div>
     <nav>
         <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/catalogo">Catálogo</a></li>
-            <li><a href="/contacto">Contacto</a></li>
-            <li><a href="/login">Iniciar Sesión</a></li>
-            <li><a href="/adminPanel">Admin</a></li>
-            <!-- <li><a href="/registro">Registro</a></li> -->
+            
+            <% if (nickname && nickname !== '') { %>
+                <li class="centrar"><a href="/">Inicio</a></li>
+                <li class="centrar"><a href="/catalogo">Catálogo</a></li>
+                <li class="centrar"><a href="/contacto">Contacto</a></li>
+                <li class="centrar"><a href="/logout"><img src="/resources/pics/logout.png" class="logologout"></a></li>
+                <li class="centrar"><a href="/panelAdmin" class="nickname"><%= nickname %></a></li>
+            <% } else { %>
+                <li class="centrar"><a href="/">Inicio</a></li>
+                <li class="centrar"><a href="/catalogo">Catálogo</a></li>
+                <li class="centrar"><a href="/contacto">Contacto</a></li>
+                <li class="centrar"><a href="/login"><img src="resources/pics/login.png" class="logologin"></a></li>
+            <% } %> 
         </ul>
     </nav>
 </header>

@@ -1,2 +1,3 @@
+#Fichero para poder ignorar directorios y ficheros para GIT que no queremos que se suban.
 .idea/
 .vscode/

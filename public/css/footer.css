@@ -8,6 +8,7 @@ footer {
     justify-content: center; /* Centra el texto "Oliver Store" */
     align-items: center;
     position: relative;
+    max-height: 35.59px;
 }
 
 footer .social-icons {
@@ -35,4 +36,9 @@ footer .social-icons a {
 
 footer .social-icons a:hover {
     color: #ff0080; /* Cambia a rosa neón al pasar el ratón */
+}
+
+
+.copy{
+    font-size: 16px;
 }

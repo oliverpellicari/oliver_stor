@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: white;
+    background-color: #1a1a2eaf;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Sección principal */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Contenedor del formulario */
+.containerc {
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width:500px;
+    height:530px;
+}
+
+/* Título de las secciones */
+h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px; /* Separación del formulario y la tabla */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-group input, 
+.input-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #4A90E2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+/* Botón de enviar */
+button[type="submit"] {
+    padding: 12px 20px;
+    background-color: #4A90E2;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;  /* Centrar el botón */
+    margin-top: 20px; /* Espacio superior */
+    display: block;   /* Para que el botón respete el centrado */
+}
+
+button[type="submit"]:hover {
+    background-color: #357ABD;
+}
+
+/* Caja de la lista de usuarios */
+.user-list-container {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 300px;
+}
+
+/* Título dentro de la caja de usuarios */
+.user-list-container h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4A90E2;
+    padding-bottom: 10px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #4A90E2;
+    color: #fff;
+    text-align: left;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+    background-color: #f4f4f9;
+}
+
+table tbody tr:last-of-type {
+    border-bottom: 2px solid #4A90E2;
+}
+
+table tbody tr:hover {
+    background-color: #e1f0ff;
+    cursor: pointer;
+}
+
+/* Hacer la tabla responsive */
+@media (max-width: 768px) {
+    form {
+        margin-bottom: 30px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    table thead tr {
+        display: none;
+    }
+
+    table tbody tr {
+        margin-bottom: 15px;
+    }
+
+    table tbody tr td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table tbody tr td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+        background-color: #f4f4f9;
+    }
+}
